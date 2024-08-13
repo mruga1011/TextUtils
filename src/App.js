@@ -2,9 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import Alert from './components/Alert';
-import About from './components/About';
-import { BrowserRouter as Router, Route, Routes , Link } from 'react-router-dom';
+//import Alert from './components/Alert';
+// import About from './components/About';
+// import { BrowserRouter as Router, Route, Routes , Link } from 'react-router-dom';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
       {/* <nav>
           
           <Link to="/">
@@ -49,12 +49,13 @@ function App() {
         <Alert alert={alert} />
                                    
         <div className="container">
-          <Routes>
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text" />} />
-          </Routes>
+          {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About />} /> */}
+            {/* <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text" />} /> */}
+            <TextForm showAlert={showAlert} heading="Enter text" />
+          {/* </Routes> */}
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
