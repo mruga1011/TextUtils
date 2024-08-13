@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-//import Alert from './components/Alert';
+import Alert from './components/Alert';
 // import About from './components/About';
 
 // import { BrowserRouter as Router, Route, Routes , Link } from 'react-router-dom';
@@ -23,14 +23,12 @@ function App() {
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark');
-      showAlert("Dark mode has been enabled", "success")
-      document.title = "TetUtils - Dark Mode"
+      document.title = "TextUtils - Dark Mode";
     } else {
       setMode('light');
-      showAlert("light mode has been enabled", "success");
-      document.title = "TextUtils - Light Mode"
+      document.title = "TextUtils - Light Mode";
     }
-  }
+  };
 
 
   return (
